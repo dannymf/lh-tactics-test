@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -9,9 +9,9 @@ version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/lh-tactics-test#readme>
 homepage:       https://github.com/githubuser/lh-tactics-test#readme
 bug-reports:    https://github.com/githubuser/lh-tactics-test/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2022 Author name here
+author:         Henry Blanchette
+maintainer:     blancheh@umd.edu
+copyright:      2022 Henry Blanchette
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -27,6 +27,7 @@ library
   exposed-modules:
       Data
       TIP.Prop1
+      TIP.Prop2
       TIP.Test
   other-modules:
       Paths_lh_tactics_test

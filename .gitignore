@@ -5,3 +5,5 @@
 /**/*.tactic-encoding
 /**/*.tactic/
 /**/*.vscode/
+/dist-newstyle/
+/src/TIP/Prop*

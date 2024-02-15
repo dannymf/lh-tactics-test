@@ -98,6 +98,13 @@ dropListN _ Nil = Nil
 dropListN Z l = l
 dropListN (S n) (Cons h l) = dropListN n l
 
+-- dannymf
+{-@ reflect dropList @-}
+dropList :: N -> [Bool] -> [Bool]
+dropList _ [] = []
+dropList Z as = as
+dropList (S n) (a:as) = dropList n as
+
 {-@ reflect dropWhileListN @-}
 dropWhileListN :: (N -> Bool) -> ListN -> ListN
 dropWhileListN f Nil = Nil

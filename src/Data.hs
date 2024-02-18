@@ -81,6 +81,12 @@ data ListN = Nil | Cons N ListN
 @-}
 data ListN = Nil | Cons N ListN deriving (Eq, Show)
 
+{-@
+data List a = LNil | LCons a List
+@-}
+data List a = LNil | LCons a (List a) deriving (Eq, Show)
+
+
 {-@ reflect concatListN @-}
 concatListN :: ListN -> ListN -> ListN
 concatListN Nil l2 = l2
@@ -99,11 +105,11 @@ dropListN Z l = l
 dropListN (S n) (Cons h l) = dropListN n l
 
 -- dannymf
-{-@ reflect dropList @-}
-dropList :: N -> [Bool] -> [Bool]
-dropList _ [] = []
-dropList Z as = as
-dropList (S n) (a:as) = dropList n as
+-- {-@ reflect dropList @-}
+-- dropList :: N -> [a] -> [a]
+-- dropList _ [] = []
+-- dropList Z as = as
+-- dropList (S n) (a:as) = dropList n as
 
 {-@ reflect dropWhileListN @-}
 dropWhileListN :: (N -> Bool) -> ListN -> ListN

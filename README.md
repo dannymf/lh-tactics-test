@@ -1,26 +1,24 @@
 # lh-tactics-test
 
-Replication package for Haskell'22 paper "Liquid Proof Macros".
+Replication package for Daniel's undergraduate thesis, building on the _[Liquid Proof Macros][liquid-proof-macros]_ paper.
 
 ## Documentation
 
-For now, please see our paper _[Liquid Proof Macros][liquid-proof-macros]_ and
+See the paper _[Liquid Proof Macros][liquid-proof-macros]_ and
 the examples in `props-done/` for details on how to use `lh-tactics`.
 
 ## Installation
+Clone this repo, then run `cd lh-tactics-test/; git submodule update --init` in the terminal.
 
-To clonse `lh-tactics-test` and install `lh-tactics`:
+### Recommended Approach (Using Docker + VSCode)
+Install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in VSCode. When promped to 'Open in Container', choose this option. The installation takes quite long (~45 mins to install all the dependencies).
 
+### Manual Approach (Not recommended)
+This approach is not recommended since you may run into dependency issues when trying to perform the manual installation. To install manually, 
 ```sh
-# clone the `lh-tatics-test` repository, 
-# which includes `lh-tactics as a submodule
-git clone https://github.com/Riib11/lh-tactics-test.git
-cd lh-tactics-test/
-git submodule update --init
-
-# build and install `lh-tactics` library and executable
-cd lh-tactics/
-sh build-install
+cp lh-tactics.cabal-correct /workspaces/lh-tactics-test/lh-tactics/lh-tactics.cabal
+cd lh-tactics-test/lh-tactics
+stack build; stack install
 ```
 
 ## Running one of our tests

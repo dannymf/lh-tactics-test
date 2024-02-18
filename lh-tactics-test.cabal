@@ -29,6 +29,8 @@ library
       TIP.Prop1
       TIP.Prop11
       TIP.Prop11poly
+      TIP.Prop13
+      TIP.Prop19
       TIP.Prop2
       TIP.Test
   other-modules:

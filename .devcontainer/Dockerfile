@@ -41,17 +41,6 @@ RUN curl -sSL https://get.haskellstack.org/ | sh
 COPY .zshrc /home/root/
 COPY .zshrc /home/$USERNAME/
 
-## Run in usermode
-
-# [Optional] Set the default user. Omit if you want to keep the default as root.
-# USER $USERNAME
-
-# RUN mkdir -p /home/$USERNAME/.local/state/
-# RUN touch /home/$USERNAME/.local/state/utop-history
-
-# Configure opam/ocaml
-# WORKDIR /workspaces/lh-tactics-test
-# RUN git submodule update --init
 WORKDIR /workspaces
 RUN git clone https://github.com/Z3Prover/z3/
 WORKDIR z3
@@ -64,28 +53,7 @@ ENV PATH="${PATH}:/workspaces"
 ENV PATH="${PATH}:/root/.local/bin/"
 ENV PATH="${PATH}:/root/.ghcup/bin"
 
-# COPY lh-tactics.cabal-correct /workspaces/lh-tactics-test/lh-tactics/lh-tactics.cabal
+COPY lh-tactics.cabal-correct /workspaces/lh-tactics-test/lh-tactics/lh-tactics.cabal
 WORKDIR /workspaces/lh-tactics-test/lh-tactics
-# RUN stack build
-# RUN stack install
+CMD ["sh", "-c", "stack build; stack install"]
 # RUN stack install haskell-language-server
-
-# RUN chmod +x build-install.sh
-# RUN ./build-install.sh
-# RUN echo $(ls)
-# RUN sh build-install.sh
-
-
-
-# lh-tactics-test/lh-tactics/
-# RUN sh build-install.sh
-# RUN opam init -y --disable-sandboxing --compiler=4.13.1
-# RUN opam switch 4.13.1
-# RUN opam install -y dune
-# RUN opam install -y num
-# RUN opam install -y menhir
-# RUN opam install -y utop
-# RUN opam install -y ocamlformat
-# RUN opam install -y ocaml-lsp-server
-# RUN eval `opam config env`
-

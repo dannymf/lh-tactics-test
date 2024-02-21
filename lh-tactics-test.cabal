@@ -32,6 +32,10 @@ library
       TIP.Prop13
       TIP.Prop19
       TIP.Prop2
+      TIP.Prop26
+      TIP.Prop26a
+      TIP.Prop3
+      TIP.Prop71
       TIP.Test
   other-modules:
       Paths_lh_tactics_test

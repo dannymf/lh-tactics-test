@@ -82,7 +82,7 @@ data ListN = Nil | Cons N ListN
 data ListN = Nil | Cons N ListN deriving (Eq, Show)
 
 {-@
-data List a = LNil | LCons a List
+data List a = LNil | LCons a (List a)
 @-}
 data List a = LNil | LCons a (List a) deriving (Eq, Show)
 

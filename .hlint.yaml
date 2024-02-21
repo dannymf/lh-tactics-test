@@ -4,3 +4,5 @@
 - ignore: {name: "Use foldr"} # 1 hint
 - ignore: {name: "Collapse lambdas"}
 - ignore: {name: "Redundant lambdas"}
+- ignore: {name: "Redundant lambda"}
+

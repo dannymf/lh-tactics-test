@@ -35,6 +35,7 @@ library
       TIP.Prop26
       TIP.Prop26a
       TIP.Prop3
+      TIP.Prop52
       TIP.Prop71
       TIP.Test
   other-modules:

@@ -19,6 +19,7 @@ dependencies:
   - liquid-base == 4.15.0.0
   - template-haskell == 2.17.0.0
   - lh-tactics == 0.1.0.28
+  - containers
 
 library:
   source-dirs: src

@@ -30,7 +30,7 @@ constant a _ = a
 {-@
 data N = Z | S N
 @-}
-data N = Z | S N deriving (Eq, Show)
+data N = Z | S N deriving (Eq, Show, Ord)
 
 {-@ reflect n_to_int @-}
 {-@ n_to_int :: n:N -> {x:Int | 0 <= x} @-}
@@ -54,6 +54,12 @@ leqN :: N -> N -> Bool
 leqN Z n = True
 leqN (S m) Z = False
 leqN (S m) (S n) = leqN m n
+
+{-@ reflect geqN @-}
+geqN :: N -> N -> Bool
+geqN n Z = True
+geqN Z (S m) = False
+geqN (S m) (S n) = geqN m n
 
 {-@ reflect leN @-}
 leN :: N -> N -> Bool

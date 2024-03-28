@@ -74,6 +74,13 @@ packages:
       size: 345
   original:
     hackage: strict-io-0.2.2@sha256:1cc96f9a123a919ff9ee479f740cbc9fa9edf7c8ac65334de3fdce07638949ed,1012
+- completed:
+    hackage: liquid-containers-0.6.2.1@sha256:e04f83f398818b11bdabe7df3219bb6d300edb083bf3bf21f8ff8e220552a8c9,2293
+    pantry-tree:
+      sha256: 94c0c12f8eb26f93359d97347dd71132cacd82b79052bb2cedf5282899128ede
+      size: 2143
+  original:
+    hackage: liquid-containers-0.6.2.1@sha256:e04f83f398818b11bdabe7df3219bb6d300edb083bf3bf21f8ff8e220552a8c9,2293
 snapshots:
 - completed:
     sha256: b0da46bd3f3a2c14c20ccf4a47d344ea93c7ecae1672815cb87415cdb246a073

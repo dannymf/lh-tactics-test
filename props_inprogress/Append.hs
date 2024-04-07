@@ -3,12 +3,16 @@
 
 {-# LANGUAGE IncoherentInstances   #-}
 {-# LANGUAGE FlexibleContexts      #-}
+{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE QuasiQuotes #-}
 
-module Append where
+module TIP.Append where
 
 import Prelude hiding (map, concatMap)
-
+import Tactic.Core.Quote
 import ProofCombinators
+
+data L a = Emp | a ::: L a
 
 
 {-@ axiomatize append @-}
@@ -45,14 +49,19 @@ prop_assoc :: L a -> L a -> L a -> Proof
 prop_assoc Emp _ _          = trivial
 prop_assoc (x ::: xs) ys zs = prop_assoc xs ys zs
 
+return []
 
-
-{-@ prop_map_append ::  f:(a -> a) -> xs:L a -> ys:L a
-                    -> {map f (append xs ys) == append (map f xs) (map f ys) }
-  @-}
-prop_map_append :: (a -> a) -> L a -> L a -> Proof
-prop_map_append f Emp        ys = trivial
-prop_map_append f (_ ::: xs) ys = prop_map_append f xs ys 
+-- {-@ prop_map_append ::  f:(a -> a) -> xs:L a -> ys:L a
+--                     -> {map f (append xs ys) == append (map f xs) (map f ys) }
+--   @-}
+-- [tactic|
+-- prop_map_append :: (a -> a) -> L a -> L a -> Proof
+-- prop_map_append f xs ys = 
+--   induct xs
+-- |]
+-- MUST INCLUDE A -> A AS A TYPE
+-- prop_map_append f Emp        ys = trivial
+-- prop_map_append f (_ ::: xs) ys = prop_map_append f xs ys 
 
 
 {-@ prop_concatMap :: f:(a -> L (L a)) -> xs:L a
@@ -62,7 +71,4 @@ prop_map_append f (_ ::: xs) ys = prop_map_append f xs ys
 prop_concatMap :: (a -> L (L a)) -> L a -> Proof
 prop_concatMap _ Emp        = trivial
 prop_concatMap f (x ::: xs) = prop_concatMap f xs
-
-
-data L a = Emp | a ::: L a
 

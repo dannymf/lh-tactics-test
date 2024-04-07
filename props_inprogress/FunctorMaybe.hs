@@ -3,7 +3,7 @@
 
 {-# LANGUAGE IncoherentInstances   #-}
 {-# LANGUAGE FlexibleContexts #-}
-module FunctorMaybe where
+module TIP.FunctorMaybe where
 
 import Prelude hiding (fmap, id, Maybe(..))
 

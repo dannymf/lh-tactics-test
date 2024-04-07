@@ -1,7 +1,7 @@
 {-@ LIQUID "--reflection" @-}
 {-@ LIQUID "--ple"        @-}
 
-module OverviewList where
+module TIP.OverviewList where
 
 import Prelude hiding (map, (++))
 

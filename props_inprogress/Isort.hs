@@ -1,7 +1,7 @@
 {-@ LIQUID "--reflection" @-}
 {-@ LIQUID "--ple"        @-}
 
-module Isort where 
+module TIP.Isort where 
 
 import Prelude hiding (id, sum)
 import ProofCombinators (withProof)

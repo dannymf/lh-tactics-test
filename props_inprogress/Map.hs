@@ -4,7 +4,7 @@
 {-@ LIQUID "--higherorder"    @-}
 {-@ LIQUID "--ple" @-}
 
-module Map where
+module TIP.Map where
 
 import Proof
 
@@ -72,7 +72,7 @@ append (a:as) bs = a : append as bs
 
 {-@ reflect keys @-}
 keys                :: (Ord k) => Map k v -> Set k
-keys Map.Tip            = empty
+keys Tip            = empty
 keys (Node k _ l r) = ks `merge` kl `merge` kr
   where
     kl              = keys l
@@ -81,7 +81,7 @@ keys (Node k _ l r) = ks `merge` kl `merge` kr
 
 {-@ reflect emp @-}
 emp :: Map k v
-emp     = Map.Tip
+emp     = TIP.Map.Tip
 
 {-@ reflect set @-}
 {-@ set :: (Ord k) => k:k -> v -> m:Map k v
@@ -115,7 +115,7 @@ get k' (Node k v l r)
   | k' == k   = Just v
   | k' <  k   = get k' l
   | otherwise = get k' r
-get k Tip     = Nothing
+get k TIP.Map.Tip     = Nothing
 
 {-@ predicate HasKey K M = contains (keys M) K @-}
 

@@ -5,7 +5,7 @@
 
 {-# LANGUAGE GADTs #-}
 
-module MergeSort where
+module TIP.MergeSort where
 
 import           Prelude hiding ((++)) 
 import           ProofCombinators ((?), (===), (=>=), (***), (&&&), Proof, QED(..))

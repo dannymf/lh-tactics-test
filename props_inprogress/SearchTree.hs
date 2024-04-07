@@ -6,7 +6,7 @@
 {-@ LIQUID "--higherorder"                         @-}
 {-@ LIQUID "--ple" @-}
 
-module SearchTree where
+module TIP.SearchTree where
 
 import ProofCombinators
 import Prelude hiding (max)

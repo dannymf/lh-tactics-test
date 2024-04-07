@@ -3,7 +3,7 @@
 {-@ infixr ++              @-}
 {-@ infixr !!              @-}
 
-module PadLeft where
+module TIP.PadLeft where
 
 import Prelude hiding (max, replicate, (++), (!!))
 

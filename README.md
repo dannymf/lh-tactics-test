@@ -124,3 +124,6 @@ data available in `data/`. In particular:
 - _[Liquid Proof Macros][liquid-proof-macros]_
 
 [liquid-proof-macros]: https://www.conference-publishing.com/download.php?Event=ICFPWS22HASKELLMAIN&Paper=e31f37ddb4671b0283a52fa225590e&Version=final
+
+
+`stack build --ghc-options "-ddump-splices -fplugin=LiquidHaskell -fplugin-opt=LiquidHaskell:--compile-spec"`

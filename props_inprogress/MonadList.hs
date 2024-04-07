@@ -2,7 +2,7 @@
 {-@ LIQUID "--ple"        @-}
 {- LIQUID "--betaequivalence"  @-}
 
-module MonadList where
+module TIP.MonadList where
 
 import Prelude hiding (return, (>>=))
 

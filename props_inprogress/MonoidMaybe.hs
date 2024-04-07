@@ -1,7 +1,7 @@
 {-@ LIQUID "--reflection" @-}
 {-@ LIQUID "--ple"        @-}
 
-module MonoidMaybe where
+module TIP.MonoidMaybe where
 
 import Prelude hiding (mappend, mempty)
 

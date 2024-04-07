@@ -1,4 +1,4 @@
-module Map1 (error, mllen) where
+module TIP.Map1 (error, mllen) where
 
 import LiquidPrelude
 

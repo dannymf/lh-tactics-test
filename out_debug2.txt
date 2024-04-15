@@ -1,0 +1,523 @@
+[console] inlining tactic splices in file: /workspaces/lh-tactics-test/src/TIP/Prop15.hs
+[debug] ===[ ls_err ]===
+[debug] ========================================
+
+Warning: Trouble loading CompilerPaths cache:
+         
+         Error: [S-2673]
+         Global dump did not parse correctly.
+lh-tactics-0.1.0.28: unregistering (local file changes: ChangeLog.md README.md app/Building.hs
+app/Debug.hs app/File.hs app/InlineTactic.hs app/Main.hs a...)
+configure (lib + exe)
+Configuring lh-tactics-0.1.0.28...
+build (lib + exe) with ghc-9.0.1
+Preprocessing library for lh-tactics-0.1.0.28..
+Building library for lh-tactics-0.1.0.28..
+[ 1 of 14] Compiling Data.Serialize
+[ 2 of 14] Compiling Paths_lh_tactics
+[ 3 of 14] Compiling Proof
+[ 4 of 14] Compiling Tactic.Core.Debug
+[ 5 of 14] Compiling Tactic.Core.PreSyntax
+[ 6 of 14] Compiling Tactic.Core.Syntax
+[ 7 of 14] Compiling Tactic.Core.Utility
+[ 8 of 14] Compiling Tactic.Core.SpliceV3
+[ 9 of 14] Compiling Tactic.Core.SpliceV2
+[10 of 14] Compiling Tactic.Core.SpliceSyntax
+[11 of 14] Compiling Tactic.Core.SplicePreSyntax
+[12 of 14] Compiling Tactic.Core.PprintPreSyntax
+[13 of 14] Compiling Tactic.Core.Parse
+[14 of 14] Compiling Tactic.Core.Quote
+Preprocessing executable 'lh-tactics' for lh-tactics-0.1.0.28..
+Building executable 'lh-tactics' for lh-tactics-0.1.0.28..
+[ 1 of 24] Compiling Data.Serialize
+[ 2 of 24] Compiling Debug
+[ 3 of 24] Compiling Options
+[ 4 of 24] Compiling Parsing
+[ 5 of 24] Compiling File
+[ 6 of 24] Compiling Building
+[ 7 of 24] Compiling InlineTactic
+[ 8 of 24] Compiling Paths_lh_tactics
+[ 9 of 24] Compiling Proof
+[10 of 24] Compiling ReadLH
+[11 of 24] Compiling Tactic.Core.Debug
+[12 of 24] Compiling Tactic.Core.PreSyntax
+[13 of 24] Compiling Tactic.Core.Syntax
+[14 of 24] Compiling Tactic.Core.Utility
+[15 of 24] Compiling Tactic.Core.SpliceV3
+[16 of 24] Compiling Tactic.Core.SpliceV2
+[17 of 24] Compiling Tactic.Core.SpliceSyntax
+[18 of 24] Compiling Tactic.Core.SplicePreSyntax
+[19 of 24] Compiling PruneAutoLazyIO
+[20 of 24] Compiling Tactic.Core.PprintPreSyntax
+[21 of 24] Compiling PruneAuto
+[22 of 24] Compiling Main
+[23 of 24] Compiling Tactic.Core.Parse
+[24 of 24] Compiling Tactic.Core.Quote
+Linking .stack-work/dist/x86_64-linux/ghc-9.0.1/build/lh-tactics/lh-tactics ...
+copy/register
+Installing library in /workspaces/lh-tactics-test/.stack-work/install/x86_64-linux/e83afb1afe089161d769f8083d2f904f250aba65902a22c0265109843c725acb/9.0.1/lib/x86_64-linux-ghc-9.0.1/lh-tactics-0.1.0.28-KoA8GJHpPz33ouDTBrwBag
+Installing executable lh-tactics in /workspaces/lh-tactics-test/.stack-work/install/x86_64-linux/e83afb1afe089161d769f8083d2f904f250aba65902a22c0265109843c725acb/9.0.1/bin
+Registering library for lh-tactics-0.1.0.28..
+configure (lib)
+Configuring lh-tactics-test-0.1.0.0...
+build (lib) with ghc-9.0.1
+Preprocessing library for lh-tactics-test-0.1.0.0..
+Building library for lh-tactics-test-0.1.0.0..
+[ 1 of 22] Compiling Data
+[ 2 of 22] Compiling LiquidPrelude
+[1;94m
+**** DONE:  Only compiling specifications [skipping verification] **************
+[0m[1;90m 
+[0m[1;93m
+**** LIQUID: SAFE (0 constraints checked) **************************************
+[0m[ 3 of 22] Compiling Paths_lh_tactics_test
+[ 4 of 22] Compiling ProofCombinators
+[ 5 of 22] Compiling TIP.FFF
+[ 6 of 22] Compiling TIP.FunctorList
+[ 7 of 22] Compiling TIP.FunctorMaybe
+[#] =====================================
+[#] instrs: [intro xs,destruct xs]
+[#] env: def_name': fmap_id
+def_type': AppT (AppT ArrowT (AppT (ConT Maybe) (VarT a))) (ConT Proof)
+def_argTypes': [AppT (ConT Maybe) (VarT a)]
+def_argNames': [xs]
+arg_i': 0
+args_rec_ctx': fromList []
+ctx': fromList []
+tyvar_mappings: fromList []
+
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= []
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= []
+[#] preDec:
+[#] PreDec fmap_id (AppT (AppT ArrowT (AppT (ConT Maybe) (VarT a))) (ConT Proof)) (Lambda xs (Case (VarE xs) [(ConP GHC.Maybe.Nothing [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP GHC.Maybe.Just [VarP x_0],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp)]))
+[#] decPreDecEnc:
+[#] _tactic_encoding_fmap_id = "#Dec#NameBeginfmap_id#NameEnd#TypeBeginMaybe a -> Proof#TypeEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"
+/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs:(38,9)-(41,2): Splicing declarations
+    Language.Haskell.TH.Quote.quoteDec
+      tactic
+      "\n\
+      \fmap_id :: Maybe a -> Proof\n\
+      \fmap_id xs  = destruct xs \n"
+  ======>
+    fmap_id :: Maybe a -> Proof
+    fmap_id
+      = \ xs
+          -> case xs of
+               Nothing -> trivial
+               Just x_0 -> trivial
+    _tactic_encoding_fmap_id
+      = "#Dec#NameBeginfmap_id#NameEnd#TypeBeginMaybe a -> Proof#TypeEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"
+[#] =====================================
+[#] instrs: [intro f,intro g,intro xs,induct xs]
+[#] env: def_name': fmap_distrib
+def_type': AppT (AppT ArrowT (AppT (AppT ArrowT (VarT b)) (VarT c))) (AppT (AppT ArrowT (AppT (AppT ArrowT (VarT a)) (VarT b))) (AppT (AppT ArrowT (AppT (ConT Maybe) (VarT a))) (ConT Proof)))
+def_argTypes': [AppT (AppT ArrowT (VarT b)) (VarT c),AppT (AppT ArrowT (VarT a)) (VarT b),AppT (ConT Maybe) (VarT a)]
+def_argNames': [f,g,xs]
+arg_i': 0
+args_rec_ctx': fromList []
+ctx': fromList []
+tyvar_mappings: fromList []
+
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] genRecursions DEBUG TYP: genNeutralsV2: alpha= (b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT b)) (VarT c) and type_:AppT (AppT ArrowT (VarT b)) (VarT c) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT a)) (VarT b) and type_:AppT (AppT ArrowT (VarT b)) (VarT c) | result: True
+[#] DEBUG: genAtomsFromCtx: type= b -> c | es= ["f","g"]
+[#] INIT CALL: genNeutralsV3: alphas=b | beta=c | recursions=f
+g
+[#] DEBUG: genNeutralsV3: goal= AppT (AppT ArrowT (VarT b)) (VarT c) | es= [VarE f,VarE g]
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT b)) (VarT c) and type_:AppT (AppT ArrowT (VarT a)) (VarT b) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT a)) (VarT b) and type_:AppT (AppT ArrowT (VarT a)) (VarT b) | result: True
+[#] DEBUG: genAtomsFromCtx: type= a -> b | es= ["f","g"]
+[#] INIT CALL: genNeutralsV3: alphas=a | beta=b | recursions=f
+g
+[#] DEBUG: genNeutralsV3: goal= AppT (AppT ArrowT (VarT a)) (VarT b) | es= [VarE f,VarE g]
+[#] DEBUG: genAtomsFromCtx: type= Maybe a | es= []
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= []
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] genRecursions DEBUG TYP: genNeutralsV2: alpha= (b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT b)) (VarT c) and type_:AppT (AppT ArrowT (VarT b)) (VarT c) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT a)) (VarT b) and type_:AppT (AppT ArrowT (VarT b)) (VarT c) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:VarT a_3530822107858468865 and type_:AppT (AppT ArrowT (VarT b)) (VarT c) | result: False
+[#] DEBUG: genAtomsFromCtx: type= b -> c | es= ["f","g"]
+[#] INIT CALL: genNeutralsV3: alphas=b | beta=c | recursions=f
+g
+[#] DEBUG: genNeutralsV3: goal= AppT (AppT ArrowT (VarT b)) (VarT c) | es= [VarE f,VarE g]
+[#] DBG genRecusrions: def_type=(b -> c) -> (a -> b) -> Maybe a -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT b)) (VarT c) and type_:AppT (AppT ArrowT (VarT a)) (VarT b) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (VarT a)) (VarT b) and type_:AppT (AppT ArrowT (VarT a)) (VarT b) | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:VarT a_3530822107858468865 and type_:AppT (AppT ArrowT (VarT a)) (VarT b) | result: False
+[#] DEBUG: genAtomsFromCtx: type= a -> b | es= ["f","g"]
+[#] INIT CALL: genNeutralsV3: alphas=a | beta=b | recursions=f
+g
+[#] DEBUG: genNeutralsV3: goal= AppT (AppT ArrowT (VarT a)) (VarT b) | es= [VarE f,VarE g]
+[#] DEBUG: compareTypesPoly: COMPARED alpha:VarT a_3530822107858468865 and type_:AppT (ConT Maybe) (VarT a) | result: False
+[#] DEBUG: genAtomsFromCtx: type= Maybe a | es= []
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= []
+[#] preDec:
+[#] PreDec fmap_distrib (AppT (AppT ArrowT (AppT (AppT ArrowT (VarT b)) (VarT c))) (AppT (AppT ArrowT (AppT (AppT ArrowT (VarT a)) (VarT b))) (AppT (AppT ArrowT (AppT (ConT Maybe) (VarT a))) (ConT Proof)))) (Lambda f (Lambda g (Lambda xs (Case (VarE xs) [(ConP GHC.Maybe.Nothing [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP GHC.Maybe.Just [VarP x_0],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp)]))))
+[#] decPreDecEnc:
+[#] _tactic_encoding_fmap_distrib = "#Dec#NameBeginfmap_distrib#NameEnd#TypeBegin(b -> c) -> (a -> b) -> Maybe a -> Proof#TypeEnd#Lambda#NameBeginf#NameEnd#Lambda#NameBeging#NameEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"
+/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs:(48,9)-(51,2): Splicing declarations
+    Language.Haskell.TH.Quote.quoteDec
+      tactic
+      "\n\
+      \fmap_distrib :: (b -> c) -> (a -> b) -> Maybe a -> Proof\n\
+      \fmap_distrib f g xs = induct xs \n"
+  ======>
+    fmap_distrib :: (b -> c) -> (a -> b) -> Maybe a -> Proof
+    fmap_distrib
+      = \ f
+          -> \ g
+               -> \ xs
+                    -> case xs of
+                         Nothing -> trivial
+                         Just x_0 -> trivial
+    _tactic_encoding_fmap_distrib
+      = "#Dec#NameBeginfmap_distrib#NameEnd#TypeBegin(b -> c) -> (a -> b) -> Maybe a -> Proof#TypeEnd#Lambda#NameBeginf#NameEnd#Lambda#NameBeging#NameEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"
+[ 8 of 22] Compiling TIP.MonadList
+[ 9 of 22] Compiling TIP.MonoidMaybe
+[10 of 22] Compiling TIP.Prop1
+/workspaces/lh-tactics-test/src/TIP/Prop1.hs:19:1-9: Splicing declarations return [] ======>
+[11 of 22] Compiling TIP.Prop11
+[12 of 22] Compiling TIP.Prop11poly
+[13 of 22] Compiling TIP.Prop13
+[14 of 22] Compiling TIP.Prop15
+/workspaces/lh-tactics-test/src/TIP/Prop15.hs:20:1-9: Splicing declarations return [] ======>
+/workspaces/lh-tactics-test/src/TIP/Prop15.hs:66:1-9: Splicing declarations return [] ======>
+[#] =====================================
+[#] instrs: [intro n,intro l,induct l,auto ["prop15_lemma_proof"] 3]
+[#] env: def_name': prop15_proof
+def_type': AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))
+def_argTypes': [ConT N,ConT ListN]
+def_argNames': [n,l]
+arg_i': 0
+args_rec_ctx': fromList []
+ctx': fromList []
+tyvar_mappings: fromList []
+
+[#] inferType of VarE prop15_lemma_proof
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] genRecursions DEBUG TYP: genNeutralsV2: alpha= N -> ListN -> Proof
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT N | result: False
+[#] DEBUG: genAtomsFromCtx: type= N | es= ["n"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=N | recursions=n
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG: genNeutralsPRIME: e= n | type= N
+[#] DEBUG: genNeutralsPRIME: e= n | type= N | es= ["n"]
+[#] DEBUG: genNeutralsV3: goal= ConT N | es= [VarE n,VarE n]
+[#] DEBUG: genAtomsFromCtx: type= ListN | es= []
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=
+[#] DEBUG TYP: genNeutralsV3: alpha= Proof.Proof
+[#] DEBUG: genNeutralsPRIME: e= prop15_lemma_proof | type= Data.N -> Data.N -> Data.ListN -> Proof.Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: True
+[#] DEBUG: genAtomsFromCtx: type= Data.N -> Data.N -> Data.ListN -> Proof.Proof | es= ["prop15_lemma_proof"]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.N | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.N | es= ["n"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.N | recursions=n
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG: genNeutralsV3: goal= ConT Data.N | es= [VarE n]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.N | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.N | es= ["n"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.N | recursions=n
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG: genNeutralsV3: goal= ConT Data.N | es= [VarE n]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.ListN | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.ListN | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.ListN | es= []
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.ListN | recursions=
+[#] DEBUG: genNeutralsV3: goal= ConT Data.ListN | es= []
+[#] DEBUG: genNeutralsPRIME: e= prop15_lemma_proof | type= Data.N -> Data.N -> Data.ListN -> Proof.Proof | es= []
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= []
+[#] inferType of VarE prop15_lemma_proof
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] genRecursions DEBUG TYP: genNeutralsV2: alpha= N -> ListN -> Proof
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:ConT N | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:ConT N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT N | result: False
+[#] DEBUG: genAtomsFromCtx: type= N | es= ["n","n_0"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=N | recursions=n
+n_0
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG: genNeutralsPRIME: e= n | type= N
+[#] DEBUG: genNeutralsPRIME: e= n | type= N | es= ["n"]
+[#] DEBUG TYP: genNeutralsV3: alpha= Data.N
+[#] DEBUG: genNeutralsPRIME: e= n_0 | type= Data.N
+[#] DEBUG: genNeutralsPRIME: e= n_0 | type= Data.N | es= ["n_0"]
+[#] DEBUG: genNeutralsV3: goal= ConT N | es= [VarE n,VarE n_0,VarE n,VarE n_0]
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:ConT ListN | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:ConT ListN | result: False
+[#] DEBUG: genAtomsFromCtx: type= ListN | es= ["listN_1"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Proof.Proof | recursions=prop15_proof n listN_1
+prop15_proof n_0 listN_1
+prop15_proof n listN_1
+prop15_proof n_0 listN_1
+[#] DEBUG TYP: genNeutralsV3: alpha= Proof.Proof
+[#] DEBUG: genNeutralsPRIME: e= prop15_lemma_proof | type= Data.N -> Data.N -> Data.ListN -> Proof.Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) | result: True
+[#] DEBUG: genAtomsFromCtx: type= Data.N -> Data.N -> Data.ListN -> Proof.Proof | es= ["prop15_lemma_proof"]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:ConT Data.N | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.N | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.N | es= ["n","n_0"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.N | recursions=n
+n_0
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG TYP: genNeutralsV3: alpha= Data.N
+[#] DEBUG: genNeutralsV3: goal= ConT Data.N | es= [VarE n,VarE n_0]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:ConT Data.N | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:ConT Data.N | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.N | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.N | es= ["n","n_0"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.N | recursions=n
+n_0
+[#] DEBUG TYP: genNeutralsV3: alpha= N
+[#] DEBUG TYP: genNeutralsV3: alpha= Data.N
+[#] DEBUG: genNeutralsV3: goal= ConT Data.N | es= [VarE n,VarE n_0]
+[#] DBG genRecusrions: def_type=N -> ListN -> Proof
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.ListN and type_:ConT Data.ListN | result: True
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT N and type_:ConT Data.ListN | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:ConT Data.N and type_:ConT Data.ListN | result: False
+[#] DEBUG: compareTypesPoly: COMPARED alpha:AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.N)) (AppT (AppT ArrowT (ConT Data.ListN)) (ConT Proof.Proof))) and type_:ConT Data.ListN | result: False
+[#] DEBUG: genAtomsFromCtx: type= Data.ListN | es= ["listN_1"]
+[#] INIT CALL: genNeutralsV3: alphas= | beta=Data.ListN | recursions=listN_1
+[#] DEBUG TYP: genNeutralsV3: alpha= Data.ListN
+[#] DEBUG: genNeutralsV3: goal= ConT Data.ListN | es= [VarE listN_1]
+[#] DEBUG: genNeutralsPRIME: e= prop15_lemma_proof | type= Data.N -> Data.N -> Data.ListN -> Proof.Proof | es= ["prop15_lemma_proof n n listN_1","prop15_lemma_proof n n_0 listN_1","prop15_lemma_proof n_0 n listN_1","prop15_lemma_proof n_0 n_0 listN_1"]
+[#] DEBUG: genNeutralsV3: goal= ConT Proof.Proof | es= [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)]
+[#] preDec:
+[#] PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp)])))
+[#] decPreDecEnc:
+[#] _tactic_encoding_prop15_proof = "#Dec#NameBeginprop15_proof#NameEnd#TypeBeginN -> ListN -> Proof#TypeEnd#Lambda#NameBeginn#NameEnd#Lambda#NameBeginl#NameEnd#Case#ExpBeginl#ExpEnd#BeginMatches#ItemMatch#PatBeginData.Nil#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginData.Cons n_0 listN_1#PatEnd#,#AutoPreExp#BeginAutoPreExps#ItemAutoExp#ExpBeginprop15_lemma_proof n n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#EndAutoPreExps#TrivialPreExp#EndMatches"
+/workspaces/lh-tactics-test/src/TIP/Prop15.hs:(72,9)-(77,2): Splicing declarations
+    Language.Haskell.TH.Quote.quoteDec
+      tactic
+      "\n\
+      \prop15_proof :: N -> ListN -> Proof\n\
+      \prop15_proof n l =\n\
+      \  induct l;\n\
+      \  auto [prop15_lemma_proof]\n"
+  ======>
+    prop15_proof :: N -> ListN -> Proof
+    prop15_proof
+      = \ n
+          -> \ l
+               -> case l of
+                    Nil -> trivial
+                    Cons n_0 listN_1
+                      -> (((prop15_lemma_proof n) n) listN_1
+                            &&&
+                              (((prop15_lemma_proof n) n_0) listN_1
+                                 &&&
+                                   (((prop15_lemma_proof n_0) n) listN_1
+                                      &&&
+                                        (((prop15_lemma_proof n_0) n_0) listN_1
+                                           &&&
+                                             ((prop15_proof n) listN_1
+                                                &&&
+                                                  ((prop15_proof n_0) listN_1
+                                                     &&&
+                                                       ((prop15_proof n) listN_1
+                                                          &&& (prop15_proof n_0) listN_1)))))))
+    _tactic_encoding_prop15_proof
+      = "#Dec#NameBeginprop15_proof#NameEnd#TypeBeginN -> ListN -> Proof#TypeEnd#Lambda#NameBeginn#NameEnd#Lambda#NameBeginl#NameEnd#Case#ExpBeginl#ExpEnd#BeginMatches#ItemMatch#PatBeginData.Nil#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginData.Cons n_0 listN_1#PatEnd#,#AutoPreExp#BeginAutoPreExps#ItemAutoExp#ExpBeginprop15_lemma_proof n n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#EndAutoPreExps#TrivialPreExp#EndMatches"
+[15 of 22] Compiling TIP.Prop19
+[16 of 22] Compiling TIP.Prop2
+/workspaces/lh-tactics-test/src/TIP/Prop2.hs:18:1-9: Splicing declarations return [] ======>
+[17 of 22] Compiling TIP.Prop26
+/workspaces/lh-tactics-test/src/TIP/Prop26.hs:23:1-9: Splicing declarations return [] ======>
+[18 of 22] Compiling TIP.Prop26a
+[19 of 22] Compiling TIP.Prop3
+/workspaces/lh-tactics-test/src/TIP/Prop3.hs:18:1-9: Splicing declarations return [] ======>
+[20 of 22] Compiling TIP.Prop71
+/workspaces/lh-tactics-test/src/TIP/Prop71.hs:35:1-9: Splicing declarations return [] ======>
+[21 of 22] Compiling TIP.PropSimple
+[22 of 22] Compiling TIP.Test
+copy/register
+Installing library in /workspaces/lh-tactics-test/.stack-work/install/x86_64-linux/e83afb1afe089161d769f8083d2f904f250aba65902a22c0265109843c725acb/9.0.1/lib/x86_64-linux-ghc-9.0.1/lh-tactics-test-0.1.0.0-LDXrqvtVQSr6fO7dyHjKLn
+Registering library for lh-tactics-test-0.1.0.0..
+Completed 2 action(s).
+
+[debug] ========================================
+====================== tacticSplices
+TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs", lineRange_TS = (38,41), name_TS = "fmap_id", lines_TS = ["fmap_id :: Maybe a -> Proof","fmap_id","  = \\ xs","      -> case xs of","           Nothing -> trivial","           Just x_0 -> trivial"], encoding_TS = "#Dec#NameBeginfmap_id#NameEnd#TypeBeginMaybe a -> Proof#TypeEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"}
+TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs", lineRange_TS = (48,51), name_TS = "fmap_distrib", lines_TS = ["fmap_distrib :: (b -> c) -> (a -> b) -> Maybe a -> Proof","fmap_distrib","  = \\ f","      -> \\ g","           -> \\ xs","                -> case xs of","                     Nothing -> trivial","                     Just x_0 -> trivial"], encoding_TS = "#Dec#NameBeginfmap_distrib#NameEnd#TypeBegin(b -> c) -> (a -> b) -> Maybe a -> Proof#TypeEnd#Lambda#NameBeginf#NameEnd#Lambda#NameBeging#NameEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"}
+TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/Prop15.hs", lineRange_TS = (72,77), name_TS = "prop15_proof", lines_TS = ["prop15_proof :: N -> ListN -> Proof","prop15_proof","  = \\ n","      -> \\ l","           -> case l of","                Nil -> trivial","                Cons n_0 listN_1","                  -> (((prop15_lemma_proof n) n) listN_1","                        &&&","                          (((prop15_lemma_proof n) n_0) listN_1","                             &&&","                               (((prop15_lemma_proof n_0) n) listN_1","                                  &&&","                                    (((prop15_lemma_proof n_0) n_0) listN_1","                                       &&&","                                         ((prop15_proof n) listN_1","                                            &&&","                                              ((prop15_proof n_0) listN_1","                                                 &&&","                                                   ((prop15_proof n) listN_1","                                                      &&& (prop15_proof n_0) listN_1)))))))"], encoding_TS = "#Dec#NameBeginprop15_proof#NameEnd#TypeBeginN -> ListN -> Proof#TypeEnd#Lambda#NameBeginn#NameEnd#Lambda#NameBeginl#NameEnd#Case#ExpBeginl#ExpEnd#BeginMatches#ItemMatch#PatBeginData.Nil#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginData.Cons n_0 listN_1#PatEnd#,#AutoPreExp#BeginAutoPreExps#ItemAutoExp#ExpBeginprop15_lemma_proof n n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#EndAutoPreExps#TrivialPreExp#EndMatches"}
+
+[debug] ========================================
+==================== ls'_file
+{-# LANGUAGE QuasiQuotes #-}
+{-# LANGUAGE TemplateHaskell #-}
+
+-- {-@ LIQUID "--compile-spec" @-}
+{-@ LIQUID "--reflection" @-}
+{-@ LIQUID "--ple-local" @-}
+
+module TIP.Prop15 where
+
+import Data
+import Proof
+import Tactic.Core.Quote
+
+-- prop15_lemma
+
+{-@ reflect prop15_lemma @-}
+prop15_lemma :: N -> N -> ListN -> Bool
+prop15_lemma n x l = lengthListN (insertListN n l) == lengthListN (Cons x l)
+
+return []
+
+{-@ automatic-instances prop15_lemma_proof @-}
+{-@
+prop15_lemma_proof :: n:N -> x:N -> l:ListN -> {prop15_lemma n x l}
+@-}
+-- [tactic|
+-- prop15_lemma_proof :: N -> N -> ListN -> Proof
+-- prop15_lemma_proof n x l =
+--   induct l
+-- |]
+-- %tactic:begin:prop15_lemma_proof
+prop15_lemma_proof :: N -> N -> ListN -> Proof
+prop15_lemma_proof
+  = \ n
+      -> \ x
+           -> \ l
+                -> case l of
+                     Nil -> trivial
+                     Cons n_0 listN_1
+                       -> (((prop15_lemma_proof n) n) listN_1
+                             &&&
+                               (((prop15_lemma_proof n) n_0) listN_1
+                                  &&&
+                                    (((prop15_lemma_proof n) x) listN_1
+                                       &&&
+                                         (((prop15_lemma_proof n_0) n) listN_1
+                                            &&&
+                                              (((prop15_lemma_proof n_0) n_0) listN_1
+                                                 &&&
+                                                   (((prop15_lemma_proof n_0) x) listN_1
+                                                      &&&
+                                                        (((prop15_lemma_proof x) n) listN_1
+                                                           &&&
+                                                             (((prop15_lemma_proof x) n_0)
+                                                                listN_1
+                                                                &&&
+                                                                  ((prop15_lemma_proof x) x)
+                                                                    listN_1))))))))
+-- %tactic:end:prop15_lemma_proof
+-- prop15
+
+{-@ reflect prop15 @-}
+prop15 :: N -> ListN -> Bool
+prop15 n l = lengthListN (insertListN n l) == S (lengthListN l)
+
+return []
+
+{-@ automatic-instances prop15_proof @-}
+{-@
+prop15_proof :: n:N -> l:ListN -> {prop15 n l}
+@-}
+-- [tactic|
+-- prop15_proof :: N -> ListN -> Proof
+-- prop15_proof n l =
+--   induct l;
+--   auto [prop15_lemma_proof]
+-- |]
+-- %tactic:begin:prop15_proof
+prop15_proof :: N -> ListN -> Proof
+prop15_proof
+  = \ n
+      -> \ l
+           -> case l of
+                Nil -> trivial
+                Cons n_0 listN_1
+                  -> (((prop15_lemma_proof n) n) listN_1
+                        &&&
+                          (((prop15_lemma_proof n) n_0) listN_1
+                             &&&
+                               (((prop15_lemma_proof n_0) n) listN_1
+                                  &&&
+                                    (((prop15_lemma_proof n_0) n_0) listN_1
+                                       &&&
+                                         ((prop15_proof n) listN_1
+                                            &&&
+                                              ((prop15_proof n_0) listN_1
+                                                 &&&
+                                                   ((prop15_proof n) listN_1
+                                                      &&& (prop15_proof n_0) listN_1)))))))
+-- %tactic:end:prop15_proof
+
+
+[console] wrote inlined splices in file: /workspaces/lh-tactics-test/src/TIP/Prop15.hs
+[debug] filePath = "/workspaces/lh-tactics-test/src/TIP/Prop15.hs"
+[debug] defName = "prop15_proof"
+[debug] tacticSplices = [TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs", lineRange_TS = (38,41), name_TS = "fmap_id", lines_TS = ["fmap_id :: Maybe a -> Proof","fmap_id","  = \\ xs","      -> case xs of","           Nothing -> trivial","           Just x_0 -> trivial"], encoding_TS = "#Dec#NameBeginfmap_id#NameEnd#TypeBeginMaybe a -> Proof#TypeEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"},TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/FunctorMaybe.hs", lineRange_TS = (48,51), name_TS = "fmap_distrib", lines_TS = ["fmap_distrib :: (b -> c) -> (a -> b) -> Maybe a -> Proof","fmap_distrib","  = \\ f","      -> \\ g","           -> \\ xs","                -> case xs of","                     Nothing -> trivial","                     Just x_0 -> trivial"], encoding_TS = "#Dec#NameBeginfmap_distrib#NameEnd#TypeBegin(b -> c) -> (a -> b) -> Maybe a -> Proof#TypeEnd#Lambda#NameBeginf#NameEnd#Lambda#NameBeging#NameEnd#Lambda#NameBeginxs#NameEnd#Case#ExpBeginxs#ExpEnd#BeginMatches#ItemMatch#PatBeginGHC.Maybe.Nothing#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginGHC.Maybe.Just x_0#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#EndMatches"},TacticSplice {filePath_TS = "/workspaces/lh-tactics-test/src/TIP/Prop15.hs", lineRange_TS = (72,77), name_TS = "prop15_proof", lines_TS = ["prop15_proof :: N -> ListN -> Proof","prop15_proof","  = \\ n","      -> \\ l","           -> case l of","                Nil -> trivial","                Cons n_0 listN_1","                  -> (((prop15_lemma_proof n) n) listN_1","                        &&&","                          (((prop15_lemma_proof n) n_0) listN_1","                             &&&","                               (((prop15_lemma_proof n_0) n) listN_1","                                  &&&","                                    (((prop15_lemma_proof n_0) n_0) listN_1","                                       &&&","                                         ((prop15_proof n) listN_1","                                            &&&","                                              ((prop15_proof n_0) listN_1","                                                 &&&","                                                   ((prop15_proof n) listN_1","                                                      &&& (prop15_proof n_0) listN_1)))))))"], encoding_TS = "#Dec#NameBeginprop15_proof#NameEnd#TypeBeginN -> ListN -> Proof#TypeEnd#Lambda#NameBeginn#NameEnd#Lambda#NameBeginl#NameEnd#Case#ExpBeginl#ExpEnd#BeginMatches#ItemMatch#PatBeginData.Nil#PatEnd#,#AutoPreExp#BeginAutoPreExps#EndAutoPreExps#TrivialPreExp#ItemMatch#PatBeginData.Cons n_0 listN_1#PatEnd#,#AutoPreExp#BeginAutoPreExps#ItemAutoExp#ExpBeginprop15_lemma_proof n n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_lemma_proof n_0 n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n listN_1#ExpEnd#ItemAutoExp#ExpBeginprop15_proof n_0 listN_1#ExpEnd#EndAutoPreExps#TrivialPreExp#EndMatches"}]
+[console] pruning autos in module "/workspaces/lh-tactics-test/src/TIP/Prop15.hs" in definition "prop15_proof"
+PASSES LH & GHC
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1)] (PruneAutoState {kept = [], pruned = [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+FAILS LH
+Prune autos: prune failure, instead keep that exp
+Prune autos: trying prune
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [] (PruneAutoState {kept = [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1)], pruned = [AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))
+PASSES LH & GHC
+Prune autos: prune success
+Prune autos: done
+preDec:
+PreDec prop15_proof (AppT (AppT ArrowT (ConT N)) (AppT (AppT ArrowT (ConT ListN)) (ConT Proof))) (Lambda n (Lambda l (Case (VarE l) [(ConP Data.Nil [],AutoPreExp [] (PruneAutoState {kept = [], pruned = []}) TrivialPreExp),(ConP Data.Cons [VarP n_0,VarP listN_1],AutoPreExp [] (PruneAutoState {kept = [AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1)], pruned = [AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n_0)) (VarE listN_1),AppE (AppE (VarE prop15_proof) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n_0)) (VarE n)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n_0)) (VarE listN_1),AppE (AppE (AppE (VarE prop15_lemma_proof) (VarE n)) (VarE n)) (VarE listN_1)]}) TrivialPreExp)])))

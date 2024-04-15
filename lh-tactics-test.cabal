@@ -9,9 +9,8 @@ version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/lh-tactics-test#readme>
 homepage:       https://github.com/githubuser/lh-tactics-test#readme
 bug-reports:    https://github.com/githubuser/lh-tactics-test/issues
-author:         Henry Blanchette
-maintainer:     blancheh@umd.edu
-copyright:      2022 Henry Blanchette
+author:         Daniel Friedman
+maintainer:     df19@princeton.edu
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -30,10 +29,14 @@ library
       ProofCombinators
       TIP.FFF
       TIP.FunctorList
+      TIP.FunctorMaybe
+      TIP.MonadList
+      TIP.MonoidMaybe
       TIP.Prop1
       TIP.Prop11
       TIP.Prop11poly
       TIP.Prop13
+      TIP.Prop15
       TIP.Prop19
       TIP.Prop2
       TIP.Prop26

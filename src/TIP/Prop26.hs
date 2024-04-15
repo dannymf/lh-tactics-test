@@ -26,13 +26,13 @@ return []
 {-@
 prop26_proof :: x:N -> xs:ListN -> ys:ListN -> {prop26 x xs ys}
 @-}
--- [tactic|
--- prop26_proof :: N -> ListN -> ListN -> Proof
--- prop26_proof x xs ys = induct xs
--- |]
--- %tactic:begin:prop26_proof
+[tactic|
 prop26_proof :: N -> ListN -> ListN -> Proof
-prop26_proof = \x -> \xs -> \ys -> case xs of
-                                       Data.Nil -> trivial
-                                       Data.Cons n_0 listN_1 -> prop26_proof x listN_1 ys
+prop26_proof x xs ys = induct xs
+|]
+-- %tactic:begin:prop26_proof
+-- prop26_proof :: N -> ListN -> ListN -> Proof
+-- prop26_proof = \x -> \xs -> \ys -> case xs of
+--                                        Data.Nil -> trivial
+--                                        Data.Cons n_0 listN_1 -> prop26_proof x listN_1 ys
 -- %tactic:end:prop26_proof

@@ -2,9 +2,8 @@ name: lh-tactics-test
 version: 0.1.0.0
 github: "githubuser/lh-tactics-test"
 license: BSD3
-author: "Henry Blanchette"
-maintainer: "blancheh@umd.edu"
-copyright: "2022 Henry Blanchette"
+author: "Daniel Friedman"
+maintainer: "df19@princeton.edu"
 
 extra-source-files:
   - README.md

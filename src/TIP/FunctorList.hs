@@ -74,11 +74,25 @@ fmap_id
 fmap_distrib :: f:(a -> a) -> g:(a -> a) -> xs:L a
                -> { fmap (compose f g) xs == compose (fmap f) (fmap g) xs } 
 @-}
-[tactic|
+-- [tactic|
+-- fmap_distrib :: (a -> a) -> (a -> a) -> L a -> Proof
+-- fmap_distrib f g xs =
+--   induct xs
+-- |]
+-- %tactic:begin:fmap_distrib
 fmap_distrib :: (a -> a) -> (a -> a) -> L a -> Proof
-fmap_distrib f g xs =
-  induct xs
-|]
+fmap_distrib
+  = \ f
+      -> \ g
+           -> \ xs
+                -> case xs of
+                     N -> trivial
+                     C x_0 x_1
+                       -> (((fmap_distrib f) f) x_1
+                             &&&
+                               (((fmap_distrib f) g) x_1
+                                  &&& (((fmap_distrib g) f) x_1 &&& ((fmap_distrib g) g) x_1)))
+-- %tactic:end:fmap_distrib
 
 -- fmap_distrib :: (a -> a) -> (a -> a) -> L a -> Proof
 -- fmap_distrib
